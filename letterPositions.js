@@ -24,20 +24,37 @@ const eqArrays = (arr1, arr2) => {
   return true;
 };
 
-//count letters function
-const countLetters = (stringParam) => {
-  let newObj = {};
-  for (let i = 0; i < stringParam.length; i++)  {
-    if (newObj[stringParam[i]]) {
-      newObj[stringParam[i]].push(i);
+
+// letter position
+const letterPositions = function(sentence) {
+  const results = {};
+  // logic to update results here
+  for (letter of sentence) {
+    if (results[letter]) {
+
     } else {
-      newObj[stringParam[i]] = [i];
+      results[letter] = [letter]
     }
+    console.log(results)
   }
-  return newObj;
+  return results;
 };
 
-const result1 = countLetters('hello');
+results1 = letterPositions("hello")
 
-//TEST CODE
-console.log(assertArraysEqual(result1['l'], [2, 3]));
+console.log(assertArraysEqual(results1['l'], [2,3]))
+
+
+// results for "lighthouse in the house"
+// { 
+//   l: [0],
+//   i: [1, 11],
+//   g: [2],
+//   h: [3, 5, 15, 18],
+//   t: [4, 14],
+//   o: [6, 19],
+//   u: [7, 20],
+//   s: [8, 21],
+//   e: [9, 16, 22],
+//   n: [12]
+// }
