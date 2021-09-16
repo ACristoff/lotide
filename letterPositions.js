@@ -27,17 +27,15 @@ const eqArrays = (arr1, arr2) => {
 
 // letter position
 const letterPositions = function(sentence) {
-  const results = {};
-  // logic to update results here
-  for (letter of sentence) {
-    if (results[letter]) {
-
+  let newObj = {};
+  for (let i = 0; i < sentence.length; i++)  {
+    if (newObj[sentence[i]]) {
+      newObj[sentence[i]].push(i);
     } else {
-      results[letter] = [letter]
+      newObj[sentence[i]] = [i];
     }
-    console.log(results)
   }
-  return results;
+  return newObj;
 };
 
 results1 = letterPositions("hello")

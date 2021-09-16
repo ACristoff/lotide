@@ -29,15 +29,16 @@ const countLetters = (stringParam) => {
   let newObj = {};
   for (let i = 0; i < stringParam.length; i++)  {
     if (newObj[stringParam[i]]) {
-      newObj[stringParam[i]].push(i);
+      newObj[stringParam[i]] += 1
     } else {
-      newObj[stringParam[i]] = [i];
+      newObj[stringParam[i]] = 1;
     }
   }
   return newObj;
 };
 
+
 const result1 = countLetters('hello');
 
 //TEST CODE
-console.log(assertArraysEqual(result1['l'], [2, 3]));
+console.log(assertArraysEqual(result1['l'], 2));
