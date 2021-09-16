@@ -59,18 +59,34 @@ const eqObjects = function(objects1, objects2) {
 };
 
 
+// FUNCTION IMPLEMENTATION
+const assertObjectsEqual = function(actual, expected) {
+  const inspect = require('util').inspect; // <= add this line
+  console.log(inspect(actual));
+  console.log(inspect(expected));
+  let result = eqObjects(actual, expected);
+  console.log(result)
+  if (result === true) {
+    return `✅✅✅Assertion Passed: ${inspect(actual)} and ${inspect(expected)} are equal`;
+  } else {
+    return `🛑🛑🛑Assertion Failed: ${inspect(actual)} and ${inspect(expected)} are not equal`;
+  }
+};
+
+
+
 //TEST CODE
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-assertEqual(eqObjects(ab, ba), true); // => true
+console.log(assertObjectsEqual(ab, ba)); // => true
+//✅✅✅Assertion Passed: Object 1 and 2 are equal
 
-const abc = { a: "1", b: "2", c: "3" };
-assertEqual(eqObjects(ab, abc), false); // => false
+// const abc = { a: "1", b: "2", c: "3" };
+// console.log(assertObjectsEqual((ab, abc), false)); // => false
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true); // => true
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// assertEqual(eqObjects(cd, dc), true); // => true
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false); // => false
-
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// assertEqual(eqObjects(cd, cd2), false); // => false
