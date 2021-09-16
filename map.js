@@ -44,5 +44,5 @@ const results2 = map(words, word => word.length)
 const results2Expected = [ 6, 7, 2, 5, 3 ]
 assertArraysEqual(results2, results2Expected)
 
-const results3 = map(words, word => 'the next word is ' + word )
+const results3 = map(words, word => 'the next word is ' + word.toUpperCase() )
 console.log(results3)
