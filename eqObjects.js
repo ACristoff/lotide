@@ -44,7 +44,7 @@ const eqObjects = function(objects1, objects2) {
   if (keyList1.length !== keyList2.length) {
     return false
   }
-  for (entries of keyList1) {
+  for (let entries of keyList1) {
     if (Array.isArray(objects1[entries])) {
       if (!(eqArrays(objects1[entries], objects2[entries]))) {
         return false

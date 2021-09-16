@@ -9,7 +9,7 @@ const assertEqual = function(actual, expected) {
 
 //findKeyByValue function
 const findKeyByValue = (showlist, show) => {
-  for (genres in showlist) {
+  for (let genres in showlist) {
     if (show === showlist[genres] ) {
       return genres
     }
