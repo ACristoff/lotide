@@ -1,0 +1,28 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "a lotide library for lighthouse labs",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.3.4"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ACristoff/lotide.git"
+  },
+  "author": "Alex Cristoffanini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ACristoff/lotide/issues"
+  },
+  "homepage": "https://github.com/ACristoff/lotide#readme"
+}
