@@ -6,7 +6,7 @@ const findKey = (objectparam, callback) => {
   }
 }
 
-
+//callback(object["blue hill"])
 // //findKeyByValue function
 // const findKeyByValue = (showlist, show) => {
 //   for (let genres in showlist) {

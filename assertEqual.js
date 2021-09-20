@@ -1,3 +1,4 @@
+const head = require('./head');
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
@@ -7,8 +8,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual("Alex", "Alex");
-assertEqual(1, 1);
-assertEqual(1, 2);
+
+
+module.exports = assertEqual;

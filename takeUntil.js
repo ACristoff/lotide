@@ -58,3 +58,4 @@ const results2Expected = [ 'I\'ve', 'been', 'to', 'Hollywood' ]
 assertArraysEqual(results1, results1Expected)
 
 assertArraysEqual(results2, results2Expected)
+
